@@ -7,7 +7,12 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
+  res.sendStatus(200);
+});
+
+app.post("/", (req, res) => {
   console.log(req.data);
+  res.sendStatus(201);
 });
 
 app.listen(port, () => {
